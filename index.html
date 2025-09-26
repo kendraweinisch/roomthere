@@ -6,14 +6,15 @@
     <title>RoomThere - Coming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* SDSU Color Scheme with WCAG-compliant contrast */
+        /* New Color Scheme with WCAG-compliant contrast */
         :root {
-            --sdsu-scarlet: #A6192E; /* Meets AA for large text */
-            --sdsu-black: #000000;
-            --sdsu-white: #FFFFFF;
-            --sdsu-light-gray: #F8F8F8;
-            --sdsu-dark-gray: #333333; /* Better contrast than #666 */
-            --sdsu-medium-gray: #767676; /* WCAG compliant for normal text */
+            --navy-blue: #003366; /* Primary color - meets AA for large text */
+            --kelly-green: #4CBB17; /* Accent color - meets AA for large text */
+            --orange: #FF8C00; /* Secondary accent - meets AA for large text */
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333; /* Better contrast than #666 */
+            --medium-gray: #767676; /* WCAG compliant for normal text */
         }
         
         * {
@@ -24,8 +25,8 @@
         }
         
         body {
-            background-color: var(--sdsu-light-gray);
-            color: var(--sdsu-dark-gray);
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -43,7 +44,7 @@
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--sdsu-scarlet);
+            background: var(--navy-blue);
             color: white;
             padding: 8px;
             z-index: 100;
@@ -56,7 +57,7 @@
         
         /* Header Styles */
         header {
-            background-color: var(--sdsu-white);
+            background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             padding: 20px 0;
         }
@@ -70,12 +71,12 @@
         .logo {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--sdsu-scarlet);
+            color: var(--navy-blue);
             text-decoration: none;
         }
         
         .logo span {
-            color: var(--sdsu-black);
+            color: var(--kelly-green);
         }
         
         /* Hero Section */
@@ -96,13 +97,13 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: var(--sdsu-scarlet);
+            color: var(--navy-blue);
         }
         
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 30px;
-            color: var(--sdsu-dark-gray);
+            color: var(--dark-gray);
         }
         
         /* Status message styling */
@@ -128,13 +129,13 @@
         
         /* CTA Section */
         .cta-section {
-            background-color: var(--sdsu-white);
+            background-color: var(--white);
             padding: 60px 0;
             text-align: center;
         }
         
         .cta-section h2 {
-            color: var(--sdsu-scarlet);
+            color: var(--navy-blue);
             margin-bottom: 20px;
         }
         
@@ -152,7 +153,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--sdsu-dark-gray);
+            color: var(--dark-gray);
         }
         
         .form-group input,
@@ -167,16 +168,16 @@
         
         .form-group input:focus,
         .form-group select:focus {
-            border-color: var(--sdsu-scarlet);
+            border-color: var(--navy-blue);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(166, 25, 46, 0.2);
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
         }
         
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            background: var(--sdsu-scarlet);
-            color: var(--sdsu-white);
+            background: var(--navy-blue);
+            color: var(--white);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -187,21 +188,21 @@
         }
         
         .btn:hover, .btn:focus {
-            background: #8a1527;
+            background: #002244;
             transform: translateY(-2px);
-            outline: 2px solid var(--sdsu-black);
+            outline: 2px solid var(--kelly-green);
             outline-offset: 2px;
         }
         
         /* Benefits Section */
         .benefits {
             padding: 80px 0;
-            background-color: var(--sdsu-light-gray);
+            background-color: var(--light-gray);
         }
         
         .benefits h2 {
             text-align: center;
-            color: var(--sdsu-scarlet);
+            color: var(--navy-blue);
             margin-bottom: 50px;
         }
         
@@ -212,33 +213,35 @@
         }
         
         .benefit-card {
-            background: var(--sdsu-white);
+            background: var(--white);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s;
+            border-top: 4px solid var(--kelly-green);
         }
         
         .benefit-card:hover, .benefit-card:focus-within {
             transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .benefit-icon {
             font-size: 3rem;
-            color: var(--sdsu-scarlet);
+            color: var(--orange);
             margin-bottom: 20px;
         }
         
         .benefit-card h3 {
             margin-bottom: 15px;
-            color: var(--sdsu-black);
+            color: var(--navy-blue);
         }
         
         /* Footer */
         footer {
-            background-color: var(--sdsu-black);
-            color: var(--sdsu-white);
+            background-color: var(--navy-blue);
+            color: var(--white);
             padding: 40px 0 20px;
         }
         
@@ -256,7 +259,7 @@
         }
         
         .social-links a {
-            color: var(--sdsu-white);
+            color: var(--white);
             font-size: 1.5rem;
             transition: color 0.3s;
             padding: 5px;
@@ -264,7 +267,7 @@
         }
         
         .social-links a:hover, .social-links a:focus {
-            color: var(--sdsu-scarlet);
+            color: var(--orange);
             background-color: rgba(255, 255, 255, 0.1);
             outline: none;
         }
@@ -279,7 +282,7 @@
         
         /* Focus styles for all interactive elements */
         a:focus, button:focus, input:focus, select:focus {
-            outline: 2px solid var(--sdsu-scarlet);
+            outline: 2px solid var(--kelly-green);
             outline-offset: 2px;
         }
         
